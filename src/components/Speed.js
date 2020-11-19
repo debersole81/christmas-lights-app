@@ -4,7 +4,14 @@ class Speed extends React.Component {
     render () {
         return (
             <div>
-                <h1>The Speed Controls will live here</h1>
+                <label>
+                    Speed:{" "}
+                    <input
+                        type="number"
+                        name="speed"
+                        placeholder="From 1 to 5."
+                    />
+                </label>
             </div>
         );
     };
