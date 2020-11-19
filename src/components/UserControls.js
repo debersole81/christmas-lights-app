@@ -11,8 +11,8 @@ class UserControls extends React.Component {
     render() {
         return (
             <div>
-                <Speed circle={circle} />
                 <PwrButtons circle={circle} />
+                <Speed circle={circle} />
             </div>
         );
     };
