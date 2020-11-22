@@ -6,12 +6,18 @@ import UserControls from "./components/UserControls";
 
 
 class App extends React.Component {
-constructor() {
-    super();
-        this.state = {}
+    constructor(props) {
+        super(props); 
+            this.state = {};
+            this.handlePwrOnChange = this.handlePwrOnChange.bind(this);
+            this.handlePwrOffChange = this.handlePwrOffChange.bind(this);
+        };
+
 
     handlePwrOnChange = (e) => {
-        let circle = document.getElementById("circle");
+        let circleElements = document.getElementsByClassName("circle");
+        //use a map method here
+        //if statement goes inside of the map method
         if (e.target.id === "play") {
             circle.style.animationPlayState("running");
         }
@@ -24,8 +30,6 @@ constructor() {
             circle.style.background("#563260");
         };
     };
-};
-
 
     render() {
         
