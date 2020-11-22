@@ -9,13 +9,13 @@ class PwrButtons extends React.Component {
                 <button 
                     id="play"
                     type="button"
-                    onclick={handlePwrOnChange}>
+                    onclick={this.handlePwrOnChange}>
                 On
                 </button>
                 <button
                     id="stop"
                     type="button"
-                    onclick={handlePwrOffChange}>
+                    onclick={this.handlePwrOffChange}>
                 Off
                 </button>
             </div>
