@@ -11,7 +11,7 @@ class Speed extends React.Component {
                         type="number"
                         id="quantity"
                         name="speed"
-                        defaultValue= " "
+                        defaultValue= ""
                         placeholder="From 1 to 5."
                     />
                     {" "}
