@@ -11,10 +11,11 @@ class App extends React.Component {
             this.state = {};
             this.pwrOn = this.pwrOn.bind(this);
             this.pwrOff = this.pwrOff.bind(this);
+            this.setSpeed = this.setSpeed.bind(this);
     };
         
     pwrOn = (e) => {
-        console.log ("clicked on")
+        // console.log ("clicked on")
         let circleElements = document.getElementsByClassName("circle");
         let len = circleElements.length;
 
@@ -26,7 +27,7 @@ class App extends React.Component {
     }; //pwrOn function
     
     pwrOff = (e) => {
-        console.log ("clicked off");
+        // console.log ("clicked off");
         let circleElements = document.getElementsByClassName("circle");
         let len = circleElements.length;
         
@@ -36,12 +37,17 @@ class App extends React.Component {
         }; //for loop
     }; //pwrOff function
 
+    setSpeed = (e) => {
+        console.log ("clicked run button");
+    };
+
    
     render() {
         
         const pwrControls = {
             pwrOn: this.pwrOn,
-            pwrOff: this.pwrOff
+            pwrOff: this.pwrOff,
+            setSpeed: this.setSpeed
         };
 
         return(
