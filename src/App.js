@@ -39,7 +39,14 @@ class App extends React.Component {
 
     setSpeed = (e) => {
         console.log ("clicked run button");
-    };
+        let circleElements = document.getElementsByClassName("circle");
+        let speed = document.getElementById("quantity").value;
+        let len = circleElements.length;
+
+        for (let i = 0; i < len; i++) {
+            circleElements[i].style.animationDuration = speed + "s";
+        };//for loop
+    };//setSpeed function
 
    
     render() {
