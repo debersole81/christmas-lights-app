@@ -9,40 +9,29 @@ class App extends React.Component {
     constructor(props) {
         super(props); 
             this.state = {};
-            this.handlePwrOnChange = this.handlePwrOnChange.bind(this);
-            this.handlePwrOffChange = this.handlePwrOffChange.bind(this);
-        };
+            this.pwrOff = this.pwrOff.bind(this);
+    };
+        
+    
+    //I have been unable to get functions to pass down the component tree. I've tried variables and they work. Stumped.
 
-
-    handlePwrOnChange = (e) => {
-        let circleElements = document.getElementsByClassName("circle");
-        //use a map method here
-        //if statement goes inside of the map method
-        if (e.target.id === "play") {
-            circle.style.animationPlayState("running");
-        }
+    pwrOff = (e) => {
+        console.log ("clicked");        
     };
 
-    handlePwrOffChange = (e) => {
-        let circle = document.getElementById("circle");
-        if (e.target.id === "stop") {
-            circle.style.animation("none");
-            circle.style.background("#563260");
-        };
-    };
-
+   
     render() {
         
-        const pwrControls = {
-            handlePwrOnChange: this.handlePwrOnChange,
-            handlePwrOffChange: this.handlePwrOffChange
-        };
+        // const pwrControls = {
+        //     handlePwrOnChange: this.handlePwrOnChange,
+        //     handlePwrOffChange: this.handlePwrOffChange
+        // };
 
         return(
             <div className="utilities">
                 <Lights />
                 <Title />
-                <UserControls {...pwrControls} />
+                <UserControls pwrOff={this.pwrOff} />
             </div>
         );
     };

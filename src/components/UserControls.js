@@ -4,10 +4,12 @@ import Speed from "./Speed";
 
 
 class UserControls extends React.Component {
+      
     render() {
         return (
             <div>
-                <PwrButtons />
+                <h1>{this.Welcome}</h1>
+                <PwrButtons pwrOff = {this.pwrOff} />
                 <Speed />
             </div>
         );
