@@ -27,6 +27,17 @@ body {
   align-items: center;
 }
 
+.usercontrols {
+  width: 100vw;
+  padding: 3rem;
+  color: white;
+  font-family: "Lato", sans-serif;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
 .title {
   font-family: 'Cinzel', sans-serif;
   letter-spacing: 2px;
