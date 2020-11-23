@@ -2,6 +2,7 @@ import React from "react";
 
 class Speed extends React.Component {
     render () {
+    
         return (
             <div>
                 <label>
@@ -10,7 +11,7 @@ class Speed extends React.Component {
                         type="number"
                         id="quantity"
                         name="speed"
-                        value=""
+                        defaultValue= " "
                         placeholder="From 1 to 5."
                     />
                     {" "}
