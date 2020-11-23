@@ -9,29 +9,31 @@ class App extends React.Component {
     constructor(props) {
         super(props); 
             this.state = {};
+            this.pwrOn = this.pwrOn.bind(this);
             this.pwrOff = this.pwrOff.bind(this);
     };
         
+    pwrOn = (e) => {
+        console.log ("clicked on")
+    }
     
-    //I have been unable to get functions to pass down the component tree. I've tried variables and they work. Stumped.
-
     pwrOff = (e) => {
-        console.log ("clicked");        
+        console.log ("clicked off");        
     };
 
    
     render() {
         
-        // const pwrControls = {
-        //     handlePwrOnChange: this.handlePwrOnChange,
-        //     handlePwrOffChange: this.handlePwrOffChange
-        // };
+        const pwrControls = {
+            pwrOn: this.pwrOn,
+            pwrOff: this.pwrOff
+        };
 
         return(
             <div className="utilities">
                 <Lights />
                 <Title />
-                <UserControls pwrOff={this.pwrOff} />
+                <UserControls {...pwrControls} />
             </div>
         );
     };
