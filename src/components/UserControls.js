@@ -9,7 +9,7 @@ class UserControls extends React.Component {
         return (
             <div>
                 <h1>{this.Welcome}</h1>
-                <PwrButtons pwrOff = {this.pwrOff} />
+                <PwrButtons pwrOn={this.props.pwrOn} pwrOff={this.props.pwrOff} />
                 <Speed />
             </div>
         );
