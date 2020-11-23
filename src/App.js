@@ -15,7 +15,15 @@ class App extends React.Component {
         
     pwrOn = (e) => {
         console.log ("clicked on")
-    }
+        let circleElements = document.getElementsByClassName("circle");
+        let len = circleElements.length;
+
+        for(let i = 0; i < len; i++) {
+            circleElements[i].removeAttribute("style");
+            circleElements[i].animationPlayState = "running";
+            circleElements[i].WebkitAnimationPlayState = "running";
+        };
+    };
     
     pwrOff = (e) => {
         console.log ("clicked off");        
