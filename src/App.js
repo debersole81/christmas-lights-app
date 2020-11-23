@@ -22,12 +22,19 @@ class App extends React.Component {
             circleElements[i].removeAttribute("style");
             circleElements[i].animationPlayState = "running";
             circleElements[i].WebkitAnimationPlayState = "running";
-        };
-    };
+        }; //for loop
+    }; //pwrOn function
     
     pwrOff = (e) => {
-        console.log ("clicked off");        
-    };
+        console.log ("clicked off");
+        let circleElements = document.getElementsByClassName("circle");
+        let len = circleElements.length;
+        
+        for (let i = 0; i < len; i++) {
+            circleElements[i].style.animation = "none";
+            circleElements[i].style.background = "#563260";
+        }; //for loop
+    }; //pwrOff function
 
    
     render() {
