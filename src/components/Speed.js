@@ -18,8 +18,9 @@ class Speed extends React.Component {
                     <input
                         type="submit"
                         id="submit"
-                        name="run"
+                        name=""
                         value="RUN"
+                        onClick={this.props.setSpeed}
                     />                                
                 </label>
             </div>
