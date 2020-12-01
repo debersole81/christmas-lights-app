@@ -19,6 +19,8 @@ class App extends React.Component {
         let circleElements = document.getElementsByClassName("circle");
         let len = circleElements.length;
 
+        document.getElementById("title").className = "titleon";
+
         for(let i = 0; i < len; i++) {
             circleElements[i].removeAttribute("style");
             circleElements[i].animationPlayState = "running";
