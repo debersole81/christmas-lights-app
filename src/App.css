@@ -38,12 +38,20 @@ body {
   align-items: center;
 }
 
-.title {
+.titleon {
   font-family: 'Cinzel', sans-serif;
   letter-spacing: 2px;
   font-size: 2rem;
   text-align : center;
   text-shadow: 0 0 30px white;
+}
+
+.titleoff {
+  font-family: "Cinzel", sans-serif;
+  letter-spacing: 2px;
+  font-size: 2rem;
+  text-align: center;
+  color: #563260;
 }
 
 .utilities button {
