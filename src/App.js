@@ -36,7 +36,7 @@ class App extends React.Component {
             circleElements[i].style.background = "#563260";
         }; //for loop        
         
-        document.getElementById("title").className = " ";
+        document.getElementById("title").className = "titleoff";
 
     }; //pwrOff function
 
