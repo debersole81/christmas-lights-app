@@ -30,15 +30,14 @@ class App extends React.Component {
         // console.log ("clicked off");
         let circleElements = document.getElementsByClassName("circle");
         let len = circleElements.length;
-        let title = document.getElementsByClassName("title");
-        console.log(title);
-        title.style.removeAttribute("text-shadow");
-        
+                     
         for (let i = 0; i < len; i++) {
             circleElements[i].style.animation = "none";
             circleElements[i].style.background = "#563260";
         }; //for loop        
         
+        document.getElementById("title").className = " ";
+
     }; //pwrOff function
 
     setSpeed = (e) => {
